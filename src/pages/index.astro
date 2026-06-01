@@ -1,0 +1,365 @@
+---
+import Base from '../layouts/Base.astro';
+import '../styles/home.css';
+---
+<Base
+  title="rydenpups · Luna & Stella · Dubai Dogs 🎀"
+  description="Luna & Stella — two Dubai girls creating real, funny, aesthetic pet content for brands they genuinely love."
+  current="home"
+>
+  {/* HERO */}
+  <header class="hero checker" id="top">
+    <span class="star" style="top:90px;left:6%;">✦</span>
+    <span class="star" style="top:240px;left:2%;font-size:1rem;">✦</span>
+    <span class="heart-deco" style="top:140px;right:46%;font-size:1.3rem;">♡</span>
+    <span class="star" style="bottom:120px;right:4%;">✦</span>
+    <div class="wrap hero-grid">
+      <div class="hero-copy rev">
+        <span class="kicker">🎀 Dubai's fluffiest duo</span>
+        <h1>Real dogs.<br>Real chaos.<br>Real <span class="heartchar">character</span><br>energy.</h1>
+        <p class="sub">Soft chaos. Big personalities.<br>Way too much fur. 🐾</p>
+        <div class="hero-btns">
+          <a href="#contact" class="btn btn-1">Work with us ♡</a>
+          <a href="https://instagram.com/rydenpups" target="_blank" rel="noopener" class="btn btn-2">Our Instagram</a>
+        </div>
+      </div>
+      <div class="hero-photo rev">
+        <div class="polaroid hero-pola hero-pola-1">
+          <span class="tape" style="top:-14px;left:30%;transform:rotate(-9deg);"></span>
+          <img src="/h-stella.jpg" alt="Stella the cocker spaniel" />
+          <span class="cap">Stella ♡</span>
+        </div>
+        <div class="polaroid hero-pola hero-pola-2">
+          <span class="tape" style="top:-14px;left:34%;transform:rotate(8deg);background:rgba(251,201,216,.8);"></span>
+          <img src="/h-luna.jpg" alt="Luna the golden retriever" />
+          <span class="cap">Luna ♡</span>
+        </div>
+        <div class="scallop" style="top:-78px;right:-40px;transform:rotate(11deg);z-index:9;">certified couch inspectors</div>
+        <div class="sticker pink" style="bottom:54px;left:-30px;transform:rotate(-8deg);">professional<br>snack tester</div>
+        <div class="sticker lilac" style="bottom:-20px;left:42%;transform:rotate(5deg);">shed happens 🤍</div>
+      </div>
+    </div>
+  </header>
+
+  {/* ABOUT */}
+  <section class="band about" id="about">
+    <span class="star" style="top:50px;right:8%;">✦</span>
+    <div class="wrap">
+      <div class="rev" style="text-align:center;">
+        <span class="kicker">Who we are</span>
+        <h2 class="sec-h">About Luna &amp; Stella</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-polas rev">
+          <span class="star" style="top:-12px;left:8%;">✦</span>
+          <span class="heart-deco" style="bottom:10px;right:6%;font-size:1.4rem;">♡</span>
+          <div class="polaroid" style="position:relative;width:78%;margin:30px auto 0;transform:rotate(-4deg);">
+            <span class="tape" style="top:-14px;left:38%;transform:rotate(-8deg);"></span>
+            <img src="/p-luna.jpg" alt="Luna and Stella together" style="height:auto;aspect-ratio:640/755;object-fit:cover;" />
+            <span class="cap">the duo ♡</span>
+          </div>
+        </div>
+        <div class="about-text rev">
+          <p class="lead">Real dogs. Real chaos. Real personality.</p>
+          <p>We're <span class="hl">Luna &amp; Stella</span> — two Dubai girls creating content for brands we genuinely love. No overly polished studio vibe. No fake influencer energy.</p>
+          <p>Just real dog moments: crumbs on the floor, dramatic side-eyes, snack obsession, zoomies and way too much personality.</p>
+          <p>We create <span class="hl">aesthetic but relatable</span> pet content that actually feels alive — the kind every dog parent sees a little of their own pup in.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* MEET THE GIRLS */}
+  <section class="band meet" id="meet">
+    <div class="checker"></div>
+    <div class="wrap">
+      <div class="rev" style="text-align:center;">
+        <span class="kicker">The talent ✨</span>
+        <h2 class="sec-h">Meet the girls</h2>
+      </div>
+      <div class="girls">
+        <div class="girl-card luna rev">
+          <div class="pola-wrap">
+            <div class="polaroid" style="height:260px;">
+              <span class="tape" style="top:-13px;left:32%;transform:rotate(-8deg);"></span>
+              <img src="/m-luna.jpg" alt="Luna the golden retriever" />
+              <span class="cap">our Luna ♡</span>
+            </div>
+          </div>
+          <div class="emoji-name">🌞 Luna</div>
+          <div class="tag">Golden retriever · professional snack tester<br>· ASMR chewing expert</div>
+          <p class="blurb">Luna is all about funny silly faces, chaotic golden retriever energy, satisfying crunch content, treat reactions and big expressive emotions on camera. She's our food-focused UGC star.</p>
+          <div class="chip-row">
+            <span class="chip">😜 silly faces</span>
+            <span class="chip">⚡ chaos energy</span>
+            <span class="chip">🍖 snack tester</span>
+            <span class="chip">🎧 ASMR crunch</span>
+          </div>
+          <div class="punch">"this made every dog owner want to buy it immediately" — that's Luna's job ♡</div>
+        </div>
+        <div class="girl-card stella rev">
+          <div class="pola-wrap">
+            <div class="polaroid" style="height:260px;">
+              <span class="tape" style="top:-13px;left:32%;transform:rotate(7deg);background:rgba(217,201,240,.8);"></span>
+              <img src="/m-stella.jpg" alt="Stella the cocker spaniel" />
+              <span class="cap">our Stella ♡</span>
+            </div>
+          </div>
+          <div class="emoji-name">🎀 Stella</div>
+          <div class="tag">Soft lady energy with the tiniest<br>bit of diva behavior</div>
+          <p class="blurb">Stella brings fashion &amp; aesthetic vibes, luxury soft-girl content, calm pretty visuals, elegant product moments and pure main character puppy energy to every shoot.</p>
+          <div class="chip-row">
+            <span class="chip">👑 soft-girl</span>
+            <span class="chip">✨ aesthetic</span>
+            <span class="chip">🫶 mom's shadow</span>
+            <span class="chip">📷 natural model</span>
+          </div>
+          <div class="punch">less "WHERE ARE THE TREATS" — more "excuse me… is this organic?"</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* CONTENT + VIBE + WORK GALLERY */}
+  <section class="band create" id="create">
+    <span class="star" style="top:60px;left:5%;">✦</span>
+    <div class="wrap">
+      <div class="rev" style="text-align:center;">
+        <span class="kicker">What we create</span>
+        <h2 class="sec-h">Content we make ♡</h2>
+      </div>
+      <div class="create-grid">
+        <div class="content-photo rev">
+          <span class="star" style="top:-22px;left:-10px;">✦</span>
+          <div class="polaroid">
+            <span class="tape" style="top:-13px;left:34%;transform:rotate(-8deg);"></span>
+            <img src="/content-duo.jpg" alt="Luna and Stella" />
+            <span class="cap">the dream team ♡</span>
+          </div>
+        </div>
+        <div class="vibe-card rev">
+          <h3>Our vibe 🤍</h3>
+          <p>We don't create "perfect" dog content. We create:</p>
+          <div class="real">
+            <span>real reactions</span>
+            <span>real personalities</span>
+            <span>real dog behavior</span>
+          </div>
+          <p>That's why people connect with us — because every dog parent sees a little bit of their own dog in Luna &amp; Stella.</p>
+        </div>
+      </div>
+
+      <div class="work-head rev">
+        <span class="wk-kick">a peek at our work ✦</span>
+        <h3>Real collabs, real content 📸</h3>
+      </div>
+      <div class="work-grid">
+        <div class="work-pola rev"><span class="wp-tape"></span>
+          <div class="wp-img"><img src="/w1.jpg" alt="Cosmodog studio shoot" /></div>
+          <span class="wp-cap">studio shoot ♡</span></div>
+        <div class="work-pola rev"><span class="wp-tape"></span>
+          <div class="wp-img"><img src="/w2.jpg" alt="Carnibites lifestyle" /></div>
+          <span class="wp-cap">treat review</span></div>
+        <div class="work-pola rev"><span class="wp-tape"></span>
+          <div class="wp-img"><img src="/w3.jpg" alt="O2Pets product content" /></div>
+          <span class="wp-cap">product UGC</span></div>
+        <div class="work-pola rev"><span class="wp-tape"></span>
+          <div class="wp-img"><img src="/w4.jpg" alt="Stella jumping for treat" /></div>
+          <span class="wp-cap">action shot ✨</span></div>
+        <div class="work-pola rev"><span class="wp-tape"></span>
+          <div class="wp-img"><img src="/w7.jpg" alt="Cosmodog feeding moment" /></div>
+          <span class="wp-cap">feeding moment</span></div>
+        <div class="work-pola rev"><span class="wp-tape"></span>
+          <div class="wp-img"><img src="/w6.jpg" alt="Luna silly content" /></div>
+          <span class="wp-cap">funny &amp; silly</span></div>
+        <div class="work-pola rev"><span class="wp-tape"></span>
+          <div class="wp-img"><img src="/w5.jpg" alt="MoPet store visit" /></div>
+          <span class="wp-cap">store visit</span></div>
+        <div class="work-pola rev"><span class="wp-tape"></span>
+          <div class="wp-img"><img src="/w8.jpg" alt="O2Pets brand shoot" /></div>
+          <span class="wp-cap">brand shoot ✨</span></div>
+      </div>
+    </div>
+  </section>
+
+  {/* BRANDS */}
+  <section class="band brands" id="brands">
+    <div class="checker"></div>
+    <div class="wrap">
+      <div class="rev" style="text-align:center;">
+        <span class="kicker">Our little black book</span>
+        <h2 class="sec-h">Brands we work with</h2>
+      </div>
+      <div class="washi rev">♡ DOGS ♡ TREATS ♡ UGC ♡ PET LIFESTYLE ♡ DUBAI ♡ DOGS ♡ TREATS ♡ UGC ♡ PET LIFESTYLE ♡</div>
+      <div class="brand-grid">
+        <div class="brand-card rev">
+          <span class="brand-num">1</span>
+          <div class="ig-top">
+            <div class="ig-ava" style="background:#7C9BE8;">C</div>
+            <div><div class="ig-handle">@cosmopet.ae</div><div class="ig-cat">Animals · Pet nutrition</div></div>
+          </div>
+          <div class="ig-stats">
+            <div><b>245</b><span>posts</span></div>
+            <div><b>4,376</b><span>followers</span></div>
+            <div><b>UAE</b><span>based</span></div>
+          </div>
+          <div class="ig-bio">Future-ready pet nutrition. Hypoallergenic food &amp; treats with insect protein. Vet-recommended &amp; trusted by pet parents.</div>
+          <div class="ig-bnote">Luna approved the snacks immediately ♡</div>
+          <a class="ig-btn" href="https://instagram.com/cosmopet.ae" target="_blank" rel="noopener">📸 View on Instagram</a>
+        </div>
+        <div class="brand-card rev">
+          <span class="brand-num">2</span>
+          <div class="ig-top">
+            <div class="ig-ava" style="background:#C9A24B;">O</div>
+            <div><div class="ig-handle">@o2pets</div><div class="ig-cat">Pet Supplies · Supplements</div></div>
+          </div>
+          <div class="ig-stats">
+            <div><b>526</b><span>posts</span></div>
+            <div><b>6,709</b><span>followers</span></div>
+            <div><b>Dubai</b><span>based</span></div>
+          </div>
+          <div class="ig-bio">Premium pet supplements based on salmon oil. Natural treats, vet-approved. Made in Italy 🇮🇹 — for those who truly care.</div>
+          <div class="ig-bnote">soft, healthy, glowy energy ✨</div>
+          <a class="ig-btn" href="https://instagram.com/o2pets" target="_blank" rel="noopener">📸 View on Instagram</a>
+        </div>
+        <div class="brand-card rev">
+          <span class="brand-num">3</span>
+          <div class="ig-top">
+            <div class="ig-ava" style="background:#8FB0E0;">P</div>
+            <div><div class="ig-handle">@pawline.ae</div><div class="ig-cat">Pet Supplies · Subscription box</div></div>
+          </div>
+          <div class="ig-stats">
+            <div><b>52</b><span>posts</span></div>
+            <div><b>999</b><span>followers</span></div>
+            <div><b>UAE</b><span>based</span></div>
+          </div>
+          <div class="ig-bio">Built for picky pets, trusted by paw parents. Wellness treats, chews &amp; essentials. Shop or subscribe — Emirati owned.</div>
+          <div class="ig-bnote">best part? the unboxing ♡</div>
+          <a class="ig-btn" href="https://instagram.com/pawline.ae" target="_blank" rel="noopener">📸 View on Instagram</a>
+        </div>
+        <div class="brand-card rev">
+          <span class="brand-num">4</span>
+          <div class="ig-top">
+            <div class="ig-ava" style="background:#3C2E2A;">F</div>
+            <div><div class="ig-handle">@furchildpets</div><div class="ig-cat">Product/service · Raw pet food</div></div>
+          </div>
+          <div class="ig-stats">
+            <div><b>1,484</b><span>posts</span></div>
+            <div><b>17.1K</b><span>followers</span></div>
+            <div><b>UAE</b><span>based</span></div>
+          </div>
+          <div class="ig-bio">UAE's #1 raw pet food &amp; holistic care. Award-winning raw dog &amp; cat food — human-grade &amp; organic ingredients. Est. 2016.</div>
+          <div class="ig-bnote">real food, real reactions</div>
+          <a class="ig-btn" href="https://instagram.com/furchildpets" target="_blank" rel="noopener">📸 View on Instagram</a>
+        </div>
+        <div class="brand-card rev">
+          <span class="brand-num">5</span>
+          <div class="ig-top">
+            <div class="ig-ava" style="background:#5A3A33;">L</div>
+            <div><div class="ig-handle">@letoutou.dxb</div><div class="ig-cat">Pet Groomer · Concept store</div></div>
+          </div>
+          <div class="ig-stats">
+            <div><b>8</b><span>posts</span></div>
+            <div><b>229</b><span>followers</span></div>
+            <div><b>Dubai</b><span>City Walk</span></div>
+          </div>
+          <div class="ig-bio">Pet grooming, wellness &amp; concept store. Le TOUTOU — the french way to say PUPPY. The Dubai way to glow up your dog.</div>
+          <div class="ig-bnote">Stella's kind of place ✨</div>
+          <a class="ig-btn" href="https://instagram.com/letoutou.dxb" target="_blank" rel="noopener">📸 View on Instagram</a>
+        </div>
+        <div class="brand-card rev">
+          <span class="brand-num">6</span>
+          <div class="ig-top">
+            <div class="ig-ava" style="background:#C0392B;">C</div>
+            <div><div class="ig-handle">@carnibites</div><div class="ig-cat">Pet Store · Freeze-dried treats</div></div>
+          </div>
+          <div class="ig-stats">
+            <div><b>92</b><span>posts</span></div>
+            <div><b>1,145</b><span>followers</span></div>
+            <div><b>0%</b><span>gimmicks</span></div>
+          </div>
+          <div class="ig-bio">All-natural food for dogs &amp; cats. Freeze-dried. Powerful. Pet-approved. 0% gimmicks, 100% real — fuel their wild side.</div>
+          <div class="ig-bnote">treats we'd steal anyway ♡</div>
+          <a class="ig-btn" href="https://instagram.com/carnibites" target="_blank" rel="noopener">📸 View on Instagram</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* STATS */}
+  <section class="band stats">
+    <span class="heart-deco" style="top:40px;left:10%;font-size:1.6rem;">♡</span>
+    <span class="star" style="bottom:50px;right:8%;">✦</span>
+    <div class="wrap">
+      <div class="rev" style="text-align:center;">
+        <h2 class="sec-h" style="color:var(--ink);">Our little community<br>is growing fast 🤍</h2>
+        <p class="lead">authenticity · humor · aesthetic storytelling</p>
+      </div>
+      <div class="stat-row">
+        <div class="stat rev"><div class="ic">🌱</div><div class="big">800+</div><div class="cap">followers in our first active month</div></div>
+        <div class="stat rev"><div class="ic">💗</div><div class="big">Highly</div><div class="cap">engaged pet audience</div></div>
+        <div class="stat rev"><div class="ic">📍</div><div class="big">UAE</div><div class="cap">based &amp; proud</div></div>
+        <div class="stat rev"><div class="ic">🤝</div><div class="big">6</div><div class="cap">pet brand partnerships</div></div>
+        <div class="stat rev"><div class="ic">👑</div><div class="big">100%</div><div class="cap">main character energy</div></div>
+      </div>
+    </div>
+  </section>
+
+  {/* VIRAL MOMENTS */}
+  <section class="band moments">
+    <div class="wrap">
+      <div class="rev" style="text-align:center;">
+        <span class="kicker">Straight from the gram</span>
+        <h2 class="sec-h">Viral moments ✨</h2>
+      </div>
+    </div>
+    <div class="wrap">
+      <div class="moment-rail rev">
+        <a class="moment" href="https://instagram.com/rydenpups" target="_blank" rel="noopener"><div class="polaroid">
+          <div class="ph"><img src="/r130.jpg" alt="reel" /><span class="vb">▶ 130K</span>
+            <div class="play"><span>▶</span></div></div>
+          <span class="cap">our biggest hit ♡</span></div></a>
+        <a class="moment" href="https://instagram.com/rydenpups" target="_blank" rel="noopener"><div class="polaroid">
+          <div class="ph"><img src="/c3.jpg" alt="reel" /><span class="vb">▶ 84K</span>
+            <div class="play"><span>▶</span></div></div>
+          <span class="cap">treat balance 🐶</span></div></a>
+        <a class="moment" href="https://instagram.com/rydenpups" target="_blank" rel="noopener"><div class="polaroid">
+          <div class="ph"><img src="/g-bowl.jpg" alt="reel" /><span class="vb">▶ 31K</span>
+            <div class="play"><span>▶</span></div></div>
+          <span class="cap">snuffle time</span></div></a>
+        <a class="moment" href="https://instagram.com/rydenpups" target="_blank" rel="noopener"><div class="polaroid">
+          <div class="ph"><img src="/c1.jpg" alt="reel" /><span class="vb">▶ 24K</span>
+            <div class="play"><span>▶</span></div></div>
+          <span class="cap">snack test ♡</span></div></a>
+        <a class="moment" href="https://instagram.com/rydenpups" target="_blank" rel="noopener"><div class="polaroid">
+          <div class="ph"><img src="/g-stella-jump.jpg" alt="reel" /><span class="vb">▶ 20K</span>
+            <div class="play"><span>▶</span></div></div>
+          <span class="cap">treat please!</span></div></a>
+        <a class="moment" href="https://instagram.com/rydenpups" target="_blank" rel="noopener"><div class="polaroid">
+          <div class="ph"><img src="/c2.jpg" alt="reel" /><span class="vb">▶ 13K</span>
+            <div class="play"><span>▶</span></div></div>
+          <span class="cap">bowl o'clock</span></div></a>
+      </div>
+      <p class="rail-hint rev" style="text-align:center;font-family:'Gochi Hand',cursive;font-size:1.3rem;color:var(--ink-soft);margin-top:6px;">← tap any reel to watch on Instagram →</p>
+    </div>
+  </section>
+
+  {/* CTA */}
+  <section class="band cta" id="contact">
+    <div class="checker"></div>
+    <div class="wrap">
+      <div class="cta-card rev">
+        <span class="sticker lilac" style="top:-24px;left:8%;transform:rotate(-9deg);">let's be besties!</span>
+        <span class="star" style="top:20px;right:10%;font-size:1.8rem;">✦</span>
+        <h2>Let's create something<br>cute together 🎀</h2>
+        <p class="sub">We're always open to new partnerships, creative ideas &amp; fun projects.</p>
+        <p>Whether it's a gift collab or a paid partnership — Luna &amp; Stella are ready for their next brand romance. Slide into our DMs or send an email, Mom checks both. 💌</p>
+        <div class="cta-btns">
+          <a href="https://instagram.com/rydenpups" target="_blank" rel="noopener" class="btn btn-1">📸 DM us @rydenpups</a>
+          <a href="mailto:rydenpups@gmail.com" class="btn btn-2">✉️ Email us</a>
+        </div>
+        <a href="mailto:rydenpups@gmail.com" class="cta-mail">🐾 rydenpups@gmail.com</a>
+      </div>
+    </div>
+  </section>
+</Base>

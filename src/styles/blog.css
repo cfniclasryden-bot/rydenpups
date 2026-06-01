@@ -1,0 +1,350 @@
+/* ===== Blog post styles (Luni spec §4) ===== */
+/* Required classes: .lead, .quick-answer, .pull-quote, .compare-grid,    */
+/* .compare-card, .compare-card.highlight, .compare-card .label,          */
+/* .compare-table, .faq-item                                              */
+
+.blog-post {
+  background: #FFFDF8;
+  color: #6B4A57;
+  padding: 60px 0 80px;
+}
+
+.blog-post .post-wrap {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.blog-post .post-hero {
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto 30px;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(107, 74, 87, 0.18);
+}
+.blog-post .post-hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.blog-post .post-meta {
+  font-family: 'Baloo 2', cursive;
+  font-size: 0.82rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #F48BAE;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.blog-post h1 {
+  font-family: 'Baloo 2', cursive;
+  font-size: clamp(2rem, 4.4vw, 3.2rem);
+  color: #E96D97;
+  line-height: 1.1;
+  margin-bottom: 18px;
+  font-weight: 800;
+}
+
+.blog-post .post-body {
+  font-size: 1.08rem;
+  line-height: 1.75;
+}
+
+.blog-post .post-body h2 {
+  font-family: 'Baloo 2', cursive;
+  font-size: 1.85rem;
+  color: #E96D97;
+  margin: 44px 0 16px;
+  line-height: 1.15;
+}
+
+.blog-post .post-body h3 {
+  font-family: 'Baloo 2', cursive;
+  font-size: 1.35rem;
+  color: #6B4A57;
+  margin: 32px 0 12px;
+  line-height: 1.2;
+}
+
+.blog-post .post-body p {
+  margin: 0 0 18px;
+}
+
+.blog-post .post-body a {
+  color: #E96D97;
+  border-bottom: 1.5px dashed #F48BAE;
+  transition: color 0.2s, border-color 0.2s;
+}
+.blog-post .post-body a:hover {
+  color: #B79CE0;
+  border-bottom-color: #B79CE0;
+}
+
+.blog-post .post-body strong { color: #6B4A57; font-weight: 700; }
+
+.blog-post .post-body ul,
+.blog-post .post-body ol {
+  margin: 0 0 20px 24px;
+}
+.blog-post .post-body li { margin-bottom: 8px; }
+
+.blog-post .post-body img {
+  border-radius: 14px;
+  margin: 24px auto;
+  box-shadow: 0 8px 22px rgba(107, 74, 87, 0.16);
+}
+
+/* ===== .lead — opening paragraph ===== */
+.blog-post .post-body .lead,
+.blog-post .post-body p.lead {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.28rem;
+  line-height: 1.65;
+  color: #6B4A57;
+  font-weight: 500;
+  margin: 0 0 28px;
+  padding-left: 18px;
+  border-left: 4px solid #FBC9D8;
+}
+
+/* ===== .quick-answer — AI overview extraction callout ===== */
+.blog-post .post-body .quick-answer {
+  background: #FCE9A8;
+  border-radius: 16px;
+  padding: 22px 26px;
+  margin: 28px 0;
+  border-left: 6px solid #F48BAE;
+  box-shadow: 0 6px 16px rgba(107, 74, 87, 0.12);
+  position: relative;
+}
+.blog-post .post-body .quick-answer::before {
+  content: '✦ Quick answer';
+  display: block;
+  font-family: 'Baloo 2', cursive;
+  font-weight: 800;
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #E96D97;
+  margin-bottom: 8px;
+}
+.blog-post .post-body .quick-answer p {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+/* If author already wrote "Quick answer:" inside, hide it visually so it isn't duplicated */
+.blog-post .post-body .quick-answer p strong:first-child {
+  display: none;
+}
+
+/* ===== .pull-quote — editorial callout ===== */
+.blog-post .post-body .pull-quote {
+  font-family: 'Gochi Hand', cursive;
+  font-size: 1.7rem;
+  color: #E96D97;
+  line-height: 1.3;
+  text-align: center;
+  margin: 40px auto;
+  padding: 0 24px;
+  max-width: 90%;
+  position: relative;
+}
+.blog-post .post-body .pull-quote::before,
+.blog-post .post-body .pull-quote::after {
+  content: '♡';
+  display: block;
+  color: #B79CE0;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.4rem;
+  margin: 10px auto;
+}
+
+/* ===== .compare-grid + .compare-card ===== */
+.blog-post .post-body .compare-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  margin: 32px 0;
+}
+.blog-post .post-body .compare-card {
+  background: #FFFDF8;
+  border: 2.5px solid #FBC9D8;
+  border-radius: 18px;
+  padding: 24px 22px;
+  box-shadow: 0 8px 20px rgba(107, 74, 87, 0.10);
+}
+.blog-post .post-body .compare-card .label {
+  display: inline-block;
+  font-family: 'Baloo 2', cursive;
+  font-weight: 700;
+  font-size: 0.74rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #9A7C88;
+  background: #FDE2E9;
+  padding: 5px 12px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+}
+.blog-post .post-body .compare-card h3,
+.blog-post .post-body .compare-card h4 {
+  margin: 0 0 10px;
+  color: #6B4A57;
+}
+.blog-post .post-body .compare-card p { margin: 0 0 8px; font-size: 0.98rem; }
+.blog-post .post-body .compare-card.highlight {
+  border-color: #B79CE0;
+  background: #F4ECFC;
+  position: relative;
+}
+.blog-post .post-body .compare-card.highlight .label {
+  background: #B79CE0;
+  color: #fff;
+}
+.blog-post .post-body .compare-card.highlight::after {
+  content: '✦';
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  color: #B79CE0;
+  font-size: 1.4rem;
+}
+
+/* ===== .compare-table ===== */
+.blog-post .post-body table.compare-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 28px 0;
+  font-size: 0.98rem;
+  background: #FFFDF8;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(107, 74, 87, 0.10);
+}
+.blog-post .post-body table.compare-table thead {
+  background: #FBC9D8;
+}
+.blog-post .post-body table.compare-table th {
+  font-family: 'Baloo 2', cursive;
+  text-align: left;
+  padding: 14px 18px;
+  color: #6B4A57;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+}
+.blog-post .post-body table.compare-table td {
+  padding: 12px 18px;
+  border-top: 1px solid #FDE2E9;
+  vertical-align: top;
+}
+.blog-post .post-body table.compare-table tr:nth-child(even) td {
+  background: #FFF6E4;
+}
+
+/* ===== .faq-item ===== */
+.blog-post .post-body .faq-item {
+  background: #FFFDF8;
+  border-radius: 14px;
+  padding: 22px 26px;
+  margin: 14px 0;
+  border: 1.5px solid #FDE2E9;
+  box-shadow: 0 4px 12px rgba(107, 74, 87, 0.08);
+}
+.blog-post .post-body .faq-item h3 {
+  font-family: 'Baloo 2', cursive;
+  color: #E96D97;
+  font-size: 1.15rem;
+  margin: 0 0 10px;
+}
+.blog-post .post-body .faq-item p {
+  margin: 0;
+  color: #6B4A57;
+}
+
+/* ===== Tags + footer of post ===== */
+.blog-post .post-tags {
+  display: flex; flex-wrap: wrap; gap: 8px;
+  margin-top: 48px; padding-top: 26px;
+  border-top: 1.5px dashed #FBC9D8;
+}
+.blog-post .post-tags span {
+  background: #FDE2E9; color: #6B4A57;
+  font-weight: 700; font-size: 0.82rem;
+  padding: 6px 13px; border-radius: 20px;
+  border: 1.5px solid #F48BAE;
+}
+
+.blog-post .post-back {
+  display: inline-block;
+  margin-top: 28px;
+  font-family: 'Baloo 2', cursive;
+  font-weight: 700;
+  font-size: 0.92rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #E96D97;
+}
+.blog-post .post-back:hover { color: #B79CE0; }
+
+/* ===== Blog index page ===== */
+.blog-index { background: #FFF6E4; padding: 80px 0; min-height: 60vh; }
+.blog-index .blog-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px;
+  margin-top: 40px;
+}
+.blog-index .blog-card {
+  background: #FFFDF8;
+  border-radius: 20px; overflow: hidden;
+  box-shadow: 0 12px 28px rgba(107, 74, 87, 0.16);
+  transition: transform 0.2s;
+  display: block;
+}
+.blog-index .blog-card:hover {
+  transform: translateY(-6px) rotate(-1deg);
+}
+.blog-index .blog-card-img {
+  width: 100%; height: 200px;
+  background: #FBC9D8;
+  background-size: cover;
+  background-position: center;
+}
+.blog-index .blog-card-body { padding: 20px 22px 24px; }
+.blog-index .blog-card-cat {
+  font-family: 'Baloo 2', cursive;
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #F48BAE;
+  font-weight: 700;
+}
+.blog-index .blog-card h3 {
+  font-family: 'Baloo 2', cursive;
+  font-size: 1.25rem;
+  color: #E96D97;
+  margin: 6px 0 10px;
+  line-height: 1.2;
+}
+.blog-index .blog-card p {
+  font-size: 0.95rem; line-height: 1.55;
+  color: #6B4A57;
+}
+.blog-index .blog-empty {
+  text-align: center; padding: 60px 20px;
+  font-family: 'Gochi Hand', cursive;
+  font-size: 1.5rem;
+  color: #9A7C88;
+}
+
+@media (max-width: 900px) {
+  .blog-index .blog-grid { grid-template-columns: 1fr 1fr; }
+  .blog-post .post-body .compare-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .blog-index .blog-grid { grid-template-columns: 1fr; }
+}

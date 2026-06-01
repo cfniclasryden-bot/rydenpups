@@ -1,0 +1,89 @@
+---
+import Base from '../layouts/Base.astro';
+import '../styles/home.css';
+
+const services = [
+  { icon: '📱', title: 'UGC Content', desc: 'Authentic user-generated content for pet brands — short videos and photos that feel real, not advertised.' },
+  { icon: '🎬', title: 'TikTok & Reels', desc: 'Short-form video content designed to perform — entertaining hooks, on-trend formats, real dog reactions.' },
+  { icon: '🌸', title: 'Aesthetic Lifestyle Photos', desc: 'Soft, scrollable, on-brand still photography for Instagram feeds, websites and product pages.' },
+  { icon: '⭐', title: 'Product Reviews', desc: 'Honest, dog-led product reviews — treat tests, gear try-ons, taste reactions captured on camera.' },
+  { icon: '😹', title: 'Funny Relatable Dog Content', desc: 'Funny, relatable moments every pet parent recognises. The kind people tag their friends in.' },
+  { icon: '🎧', title: 'ASMR Snack Videos', desc: 'Crunchy, satisfying ASMR-style snack content built around real chewing reactions.' },
+  { icon: '💅', title: 'Luxury Pet Visuals', desc: 'Elevated, editorial visuals for luxury pet brands — grooming, lifestyle, accessories, premium food.' },
+  { icon: '📍', title: 'Dubai Lifestyle Pet Content', desc: 'Location-led pet content shot across Dubai — beach days, cafes, parks, store visits.' },
+];
+---
+<Base
+  title="Collabs · rydenpups · Pet Content Creation in Dubai"
+  description="UGC, Reels, aesthetic photos, product reviews, ASMR snack content and luxury pet visuals by Luna & Stella — Dubai-based dog content creators."
+  current="collabs"
+>
+  <section class="band create" style="background:var(--cream);">
+    <span class="star" style="top:60px;left:5%;">✦</span>
+    <div class="wrap">
+      <div class="rev" style="text-align:center;">
+        <span class="kicker">How we collab</span>
+        <h2 class="sec-h">Brand collabs ♡</h2>
+        <p style="font-family:'Gochi Hand',cursive;font-size:1.5rem;color:var(--ink);margin-top:14px;">
+          eight ways Luna &amp; Stella can make content for your brand
+        </p>
+      </div>
+
+      <div class="services-grid">
+        {services.map(s => (
+          <div class="service-card rev">
+            <div class="service-icon">{s.icon}</div>
+            <h3>{s.title}</h3>
+            <p>{s.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="band cta" style="background:var(--pink);">
+    <div class="checker"></div>
+    <div class="wrap">
+      <div class="cta-card rev">
+        <h2>Got a brief?</h2>
+        <p class="sub">Tell us about your brand — we'll send back ideas.</p>
+        <div class="cta-btns">
+          <a href="mailto:rydenpups@gmail.com" class="btn btn-1">✉️ Email us</a>
+          <a href="https://instagram.com/rydenpups" target="_blank" rel="noopener" class="btn btn-2">📸 DM us @rydenpups</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+    margin-top: 46px;
+  }
+  .service-card {
+    background: var(--white);
+    border-radius: 22px;
+    padding: 28px 24px;
+    box-shadow: 0 10px 26px rgba(107, 74, 87, 0.16);
+    transition: transform 0.2s;
+  }
+  .service-card:hover { transform: translateY(-6px) rotate(-1deg); }
+  .service-icon { font-size: 2.2rem; margin-bottom: 12px; }
+  .service-card h3 {
+    font-family: 'Baloo 2', cursive;
+    font-size: 1.25rem;
+    color: var(--rose);
+    margin-bottom: 8px;
+  }
+  .service-card p { font-size: 0.95rem; line-height: 1.55; color: var(--ink); }
+
+  @media (max-width: 900px) {
+    .services-grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 520px) {
+    .services-grid { grid-template-columns: 1fr; }
+  }
+</style>

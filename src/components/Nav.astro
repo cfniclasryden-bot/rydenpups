@@ -1,0 +1,25 @@
+---
+const { current } = Astro.props;
+---
+<nav class="site-nav">
+  <div class="wrap nav-in">
+    <a href="/" class="brandmark">rydenpups<small>LUNA &amp; STELLA · DUBAI</small></a>
+    <button class="burger" aria-label="menu" id="burger">☰</button>
+    <div class="nav-links" id="nl">
+      <a href="/about" class:list={[{ active: current === 'about' }]}>About</a>
+      <a href="/collabs" class:list={[{ active: current === 'collabs' }]}>Collabs</a>
+      <a href="/blog" class:list={[{ active: current === 'blog' }]}>Blog</a>
+      <a href="/#brands">Brands</a>
+      <a href="/#contact" class="nav-cta">Work With Us ♡</a>
+    </div>
+  </div>
+</nav>
+
+<script>
+  const burger = document.getElementById('burger');
+  const nl = document.getElementById('nl');
+  burger?.addEventListener('click', () => nl?.classList.toggle('open'));
+  nl?.querySelectorAll('a').forEach(a =>
+    a.addEventListener('click', () => nl.classList.remove('open'))
+  );
+</script>

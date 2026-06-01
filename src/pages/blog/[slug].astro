@@ -1,0 +1,52 @@
+---
+import Base from '../../layouts/Base.astro';
+import '../../styles/blog.css';
+import { getCollection, type CollectionEntry } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog', ({ data }) => !data.draft);
+  return posts.map(post => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+type Props = { post: CollectionEntry<'blog'> };
+const { post } = Astro.props;
+const { Content } = await post.render();
+
+function fmtDate(d: Date) {
+  return d.toLocaleDateString('en-GB', { year: 'numeric', month: 'long', day: 'numeric' });
+}
+---
+<Base
+  title={`${post.data.title} · rydenpups`}
+  description={post.data.description}
+  current="blog"
+  ogImage={post.data.heroImage}
+>
+  <article class="blog-post">
+    {post.data.heroImage && (
+      <div class="post-hero">
+        <img src={post.data.heroImage} alt={post.data.title} />
+      </div>
+    )}
+    <div class="post-wrap">
+      <div class="post-meta">
+        {post.data.category ? `${post.data.category} · ` : ''}{fmtDate(post.data.pubDate)}
+      </div>
+      <h1>{post.data.title}</h1>
+      <div class="post-body">
+        <Content />
+      </div>
+
+      {post.data.tags && post.data.tags.length > 0 && (
+        <div class="post-tags">
+          {post.data.tags.map(t => <span>#{t}</span>)}
+        </div>
+      )}
+
+      <a href="/blog" class="post-back">← back to all posts</a>
+    </div>
+  </article>
+</Base>

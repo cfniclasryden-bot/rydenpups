@@ -1,0 +1,53 @@
+---
+import Base from '../../layouts/Base.astro';
+import '../../styles/blog.css';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog', ({ data }) => !data.draft))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+function fmtDate(d: Date) {
+  return d.toLocaleDateString('en-GB', { year: 'numeric', month: 'short', day: 'numeric' });
+}
+---
+<Base
+  title="Blog · rydenpups · Pet content & Dubai dog life"
+  description="Stories, tips and behind-the-scenes from Luna & Stella — Dubai's fluffiest content duo."
+  current="blog"
+>
+  <section class="blog-index">
+    <div class="wrap">
+      <div style="text-align:center;">
+        <span class="kicker">From the blog</span>
+        <h2 class="sec-h">Latest posts ♡</h2>
+        <p style="font-family:'Gochi Hand',cursive;font-size:1.4rem;color:var(--ink);margin-top:12px;">
+          dog life, content tips &amp; Dubai adventures
+        </p>
+      </div>
+
+      {posts.length === 0 ? (
+        <div class="blog-empty">
+          ♡ no posts yet — check back soon ♡
+        </div>
+      ) : (
+        <div class="blog-grid">
+          {posts.map(post => (
+            <a href={`/blog/${post.slug}`} class="blog-card">
+              {post.data.heroImage && (
+                <div class="blog-card-img" style={`background-image:url('${post.data.heroImage}');`}></div>
+              )}
+              <div class="blog-card-body">
+                {post.data.category && <div class="blog-card-cat">{post.data.category}</div>}
+                <h3>{post.data.title}</h3>
+                <p>{post.data.description}</p>
+                <p style="margin-top:10px;font-size:.8rem;color:var(--ink-soft);font-weight:700;">
+                  {fmtDate(post.data.pubDate)}
+                </p>
+              </div>
+            </a>
+          ))}
+        </div>
+      )}
+    </div>
+  </section>
+</Base>
